@@ -7,6 +7,15 @@
   <script src="jquery.js"></script>
 
 <style>
+  body {
+    background-color: #3981B0;
+    font-family: Times New Roman;
+    }
+  #top {
+    padding: 40px;
+    text-align: center;
+    background: #3981B0;
+  }
   .rotate90 {
       -webkit-transform: rotate(90deg);
       -moz-transform: rotate(90deg);
@@ -14,34 +23,77 @@
       -ms-transform: rotate(90deg);
       transform: rotate(90deg);
   }
+  #info {
+    background-color: #7DA1C4;
+    text-align: center;
+  }
+  #middle {
+    padding: 20px;
+    background-color: #57739C;
+  }
+  table {
+    background-color: #6F91C4;
+  }
+  #title {
+    font-weight: bold;
+  }
+  .footer {
+      position: fixed;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      padding: 20px;
+      text-align: center;
+  }
   </style>
 </head>
 <body>
-  <img src="Lee.jpg" alt="Lee" style=width:100px;height:80px class="rotate90">
-  <p>Some Info</br>
-    I am 22-years-old from Pittsburgh, PA in my senior year at Point Park University.</br>
-    I am majoring in Information Technology an plan to use the skills learned in the major</br>
-    to make my own and help make video games after I graduate. I also know the Japanese language</br>
-    quite well, whih will help me on my dream to work at Nintendo of Japan.
-  </p>
-  <p>Interests</p>
-  <ul>
-    <li>Video Games</li>
-    <li>Anime</li>
-    <li>Music</li>
-    <li>Streaming/Recording</li>
-    <li>Japanese</li>
-  </ul>
-  <p>Courses</p>
-  <ul>
-    <li>BMGT 221</li>
-    <li>BMGT 417</li>
-    <li>CMPS 262</li>
-  </ul>
-  <p>Contacts</p>
-  <ul>
-    <li>Phone: 412-721-9985</li>
-    <li>E-mail: wajorda@pointpark.edu</li>
-  </ul>
+  <div id="top">
+    <img src="Lee.jpg" alt="Lee" style=width:100px;height:80px;float:right class="rotate90">
+    <h1>Willee Jordan</h1>
+  </div>
+  <hr>
+  <div id="info">
+    <h2>Some Info</h2>
+    <p>I am 22-years-old from Pittsburgh, PA in my senior year at Point Park University.</br>
+      I am majoring in Information Technology an plan to use the skills learned in the major</br>
+      to make my own and help make video games after I graduate. I also know the Japanese language</br>
+      quite well, whih will help me on my dream to work at Nintendo of Japan.
+    </p>
+  </div>
+  <div id="middle">
+    <table align="center" border="1">
+      <tr>
+        <td id="title">Interests</td>
+        <td></td>
+        <td></td>
+        <td id="title">Courses</td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td width="150">Video Games</td>
+        <td width="150">Anime</td>
+        <td width="150">Music</td>
+        <td width="150">BMGT 221</td>
+        <td width="150">BMGT 417</td>
+        <td width="150">CMPS 262</td>
+      </tr>
+      <tr>
+        <td>Streaming/Recording</td>
+        <td>Japanese</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+  </div>
+  <div class="footer">
+    <h2>Contacts</h2>
+    <p>Phone: (412) 721-9985</br>
+    E-mail: wajorda@pointpark.edu</br>
+    Youtube and Discord: XenoWars --- Twitch: XenoWars1</p>
+  </div>
 </body>
 </html>
