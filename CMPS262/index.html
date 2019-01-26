@@ -5,13 +5,80 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <script src="jquery.js"></script>
-
+  <script>
+  $(document).ready(function() {
+    $("#home").click(function() {
+      $("#main").show();
+      $("#info").hide();
+      $("#courses").hide();
+      $("#vods").hide();
+      $("#contacts").hide();
+    });
+    $("#about").click(function() {
+      $("#main").hide();
+      $("#info").show();
+      $("#courses").show();
+      $("#vods").hide();
+      $("#contacts").hide();
+    });
+    $("#videos").click(function() {
+      $("#main").hide();
+      $("#info").hide();
+      $("#courses").hide();
+      $("#vods").show();
+      $("#contacts").hide();
+    });
+    $("#contact").click(function() {
+      $("#main").hide();
+      $("#info").hide();
+      $("#courses").hide();
+      $("#vods").hide();
+      $("#contacts").show();
+    });
+    $("#sonic1s").click(function() {
+      $("#video1").slideDown("slow");
+    });
+    $("#sonic2s").click(function() {
+      $("#video2").slideDown("slow");
+    });
+    $("#sonic1h").click(function() {
+      $("#video1").slideUp("slow");
+    });
+    $("#sonic2h").click(function() {
+      $("#video2").slideUp("slow");
+    });
+  });
+  $("button#rojo").on("click", function() {
+    $("div.top").addClass("red");
+  });
+  $("button#azure").on("click", function() {
+    $("div.top").addClass("blue");
+  });
+  $("button#timmy").on("click", function() {
+    $("div.top").addClass("times");
+  });
+  $("button#gia").on("click", function() {
+    $("div.top").addClass("geor");
+  });
+  </script>
 <style>
   body {
     background-color: #3981B0;
-    font-family: Times New Roman;
+    font-family: Times;
+  }
+  div.red {
+    background-color: #;
+  }
+  div.blue {
+    background-color: #3981B0;
     }
-  #top {
+  div.times {
+    font-family: Times;
+  }
+  div.geor {
+    font-family: Georgia;
+  }
+  .top {
     padding: 40px;
     text-align: center;
     background: #3981B0;
@@ -24,12 +91,20 @@
       transform: rotate(90deg);
   }
   #info {
+    display: none;
     background-color: #7DA1C4;
     text-align: center;
   }
-  #middle {
+  #courses {
+    display: none;
     padding: 20px;
     background-color: #57739C;
+  }
+  #vods {
+    display: none;
+  }
+  #contacts {
+    display: none;
   }
   table {
     background-color: #6F91C4;
@@ -38,21 +113,52 @@
     font-weight: bold;
   }
   .footer {
-      position: fixed;
-      left: 0;
-      bottom: 0;
       width: 100%;
       padding: 20px;
       text-align: center;
   }
+  .topnav {
+    overflow: hidden;
+    background-color: black;
+  }
+  .topnav a {
+    float: left;
+    color: white;
+    text-align: cetner;
+    padding: 14px 16px;
+    text-decoration: none;
+    text-size: 17px;
+  }
+  .topnav a:hover {
+    background-color: black;
+    color: white'
+  }
+  .topnav a.active {
+    background-color: white;
+    color: black;
+  }
+  #video1, #video2 {
+    display: none;
+  }
+  #themes {
+    padding: 40px;
+  }
   </style>
 </head>
 <body>
-  <div id="top">
+  <div class="top">
     <img src="Lee.jpg" alt="Lee" style=width:100px;height:80px;float:right class="rotate90">
     <h1>Willee Jordan</h1>
   </div>
-  <hr>
+  <div align="center" class="topnav">
+    <button class="active" id="home">Home</a>
+    <button id="about">About</a>
+    <button id="videos">Videos</a>
+    <button id="contact">Contacts</a>
+  </div>
+  <div id="main">
+    <p align="center">Welcome to my own personal site. Here you will find various info about me.</p>
+  </div>
   <div id="info">
     <h2>Some Info</h2>
     <p>I am 22-years-old from Pittsburgh, PA in my senior year at Point Park University.</br>
@@ -61,7 +167,7 @@
       quite well, whih will help me on my dream to work at Nintendo of Japan.
     </p>
   </div>
-  <div id="middle">
+  <div id="courses">
     <table align="center" border="1">
       <tr>
         <td id="title">Interests</td>
@@ -89,11 +195,38 @@
       </tr>
     </table>
   </div>
-  <div class="footer">
+  <div id="vods" align="center">
+    <h2>Featured YouTube Videos</h2>
+    <p>Sonic Adenture DX - Part 1</p>
+    <table border="1">
+      <tr>
+        <td id="sonic1s">Show</td>
+        <td id="sonic1h">Hide</td>
+      </tr>
+    </table>
+    <iframe id="video1" width="320" height="240" src="https://www.youtube.com/embed/j423Qdlm2Hk?controls=1">
+    </iframe>
+    <p>Sonic Adenture DX - Part 2</p>
+    <table border="1">
+      <tr>
+        <td id="sonic2s">Show</td>
+        <td id="sonic2h">Hide</td>
+      </tr>
+    </table>
+    <iframe id="video2" width="320" height="240" src="https://www.youtube.com/embed/qW2w56wP2uk?controls=1">
+    </iframe>
+  </div>
+  <div class="footer" id="contacts">
     <h2>Contacts</h2>
     <p>Phone: (412) 721-9985</br>
     E-mail: wajorda@pointpark.edu</br>
     Youtube and Discord: XenoWars --- Twitch: XenoWars1</p>
+  </div>
+  <div id="themes" align="center">
+    <button id="rojo">Red Color</button>
+    <button id="azure">Blue Color</button>
+    <button id="timmy">Times Font</button>
+    <button id="gia">Georgia Font</button>
   </div>
 </body>
 </html>
